@@ -32,6 +32,7 @@ const Home = () => {
         percY,
         hslX,
         hslY,
+        bg,
         rgb;
 
     posX = mousePos.x;
@@ -43,17 +44,29 @@ const Home = () => {
     hslX = Math.floor((percX / 100) * 360);
     hslY = percY;
 
-    console.log(hslX)
-    console.log(hslY)
+
+    bg = `hsl(${hslX}, 50%, ${hslY}%)`;
+
+    rgb = bg.replace('rgb(', '').replace(')', '').split(', ')
+    //console.log(window.getComputedStyle(element).backgroundColor)
+    assignRef = element => {
+        this.container = element;
+      }
+
+    const styles = this.container.style;
+    console.log(styles);
+    const computed = window.getComputedStyle(element.style).getPropertyValue("background-color");
+    console.log(computed);
+
 
 
     return (
         <div className='container' style={{ backgroundColor: `hsl(${hslX}, 50%, ${hslY}%)` }}>
             <h1>CCOLORS</h1>
 
-            <p>your color 
+            <p>HSL :{' '}
                 <b>
-                    ({hslX}, {hslY})
+                    ({hslX}, 50%, {hslY}%)
                 </b>
             </p>
 
