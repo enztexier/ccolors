@@ -8,10 +8,18 @@
 
   .container h1{
     color: white;
+    font-size: 5em;
   }
 
   .container p{
     color: white;
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: 40px;
   }
   
   #directions {
@@ -40,13 +48,13 @@
     cursor: default;
   }
   
-  #results {
+  .results {
     position: absolute;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-    width: 160px;
-    height: 40px;
+    width: 30%;
+    height: 20%;
     background-color: rgba(0, 0, 0, 0.4);
     background-color: #0004;
     border: 1px solid rgba(0, 0, 0, 0.6);
